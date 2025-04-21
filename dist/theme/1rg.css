@@ -374,3 +374,147 @@
     padding: 0 4px !important;
     color: inherit !important;
   }
+
+
+/* Collage with content slide */
+.collage-with-content {
+  display: flex !important;
+  position: relative !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+/* Content side styling */
+.collage-with-content .content-side {
+  width: 50% !important;
+  padding: 40px !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Collage side styling */
+.collage-with-content .collage-side {
+  width: 50% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+/* Image styling within collage */
+.collage-with-content .collage-image {
+  position: absolute !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  transition: transform 0.3s ease !important;
+}
+
+.collage-with-content .collage-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.collage-with-content .collage-image:hover {
+  transform: scale(1.05) !important;
+  z-index: 20 !important;
+}
+
+/* Image positions - for right side collage */
+.collage-with-content .image1 {
+  width: 45% !important;
+  top: 5% !important;
+  right: 50% !important;
+  z-index: 1 !important;
+  transform: rotate(-3deg) !important;
+}
+
+.collage-with-content .image2 {
+  width: 30% !important;
+  top: 15% !important;
+  right: 25% !important;
+  z-index: 2 !important;
+  transform: rotate(2deg) !important;
+}
+
+.collage-with-content .image3 {
+  width: 50% !important;
+  top: 40% !important;
+  right: 50% !important;
+  z-index: 3 !important;
+  transform: rotate(3deg) !important;
+}
+
+.collage-with-content .image4 {
+  width: 15% !important;
+  bottom: 20% !important;
+  right: 55% !important;
+  z-index: 4 !important;
+  transform: rotate(-2deg) !important;
+}
+
+.collage-with-content .image5 {
+  width: 40% !important;
+  bottom: 5% !important;
+  right: 15% !important;
+  z-index: 4 !important;
+  transform: rotate(3deg) !important;
+}
+
+.collage-with-content .image6 {
+  width: 30% !important;
+  bottom: 25% !important;
+  right: 15% !important;
+  z-index: 5 !important;
+  transform: rotate(3deg) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .collage-with-content {
+    flex-direction: column !important;
+  }
+  
+  .collage-with-content .content-side,
+  .collage-with-content .collage-side {
+    width: 100% !important;
+  }
+  
+  .collage-with-content .collage-side {
+    height: 50vh !important;
+  }
+}
+
+.collage-with-content {
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  background-color: var(--1rg-white) !important; /* White background */
+}
+
+/* Text colors for white background */
+.collage-with-content h1,
+.collage-with-content h2,
+.collage-with-content h3,
+.collage-with-content h4,
+.collage-with-content h5,
+.collage-with-content h6 {
+  color: var(--1rg-purple) !important; /* Purple headings */
+}
+
+.collage-with-content p,
+.collage-with-content li {
+  color: var(--1rg-black) !important; /* Black text */
+}
+
+/* Bullet styling for white background */
+.collage-with-content ul li::before {
+  background-color: var(--1rg-purple) !important; /* Purple bullets */
